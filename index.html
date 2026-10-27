@@ -4,55 +4,66 @@
   <meta name="google-site-verification" content="dGlhq8QRg_lBUYmFqdeXj1dpswV9UuMjMFEZARpbapA" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ultimate Numerology Master Report - Vedic & Chaldean Life Analysis</title>
+  <title>Complete Life Numerology Master Report - Vedic & Chaldean Life Analysis</title>
   
-  <!-- APNA GOOGLE SEARCH CONSOLE VERIFICATION TAG YAHAN RAKHEIN -->
-
-  <meta name="description" content="Free Global Numerology Calculator with 100+ languages. In-depth analysis of Mulank, Bhagyank, Soul Urge, Wealth Luck, Health, Marriage, Career & Lucky Matrix.">
+  <meta name="description" content="Free Global Numerology Calculator. Comprehensive analysis of Mulank, Bhagyank, Soul Urge, Wealth Luck, Health, Marriage, Career & Lucky Matrix.">
   <script src="https://cdn.tailwindcss.com"></script>
   
   <style>
-    /* Clean Styling for Google Translate Widget */
-    .goog-te-banner-frame.skiptranslate { display: none !important; }
-    body { top: 0px !important; }
-    #google_translate_element select {
-      background-color: #f8fafc;
-      border: 1px solid #cbd5e1;
-      padding: 6px 12px;
-      border-radius: 10px;
-      font-size: 13px;
-      font-weight: 600;
-      color: #334155;
-      outline: none;
-      cursor: pointer;
+    /* Google Translate Elements ko background me smoothly chalane ke liye */
+    .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon, .goog-te-gadget-simple {
+      display: none !important;
     }
-    .goog-logo-link { display: none !important; }
-    .goog-te-gadget { color: transparent !important; font-size: 0px !important; }
-    .goog-te-gadget span { display: none !important; }
+    body {
+      top: 0px !important;
+    }
+    #google_translate_element {
+      display: none !important;
+    }
   </style>
 
-  <!-- Google Translate Global Script -->
+  <!-- Google Translate Base Script -->
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
         autoDisplay: false
       }, 'google_translate_element');
     }
   </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col items-center p-3 sm:p-6 antialiased">
 
-  <!-- Top Language Bar & Notice -->
-  <div class="max-w-3xl w-full flex flex-wrap items-center justify-between gap-2 mb-4 bg-white px-4 py-2.5 rounded-2xl border border-slate-200 shadow-sm">
+  <!-- Hidden Anchor Element for Google Translate -->
+  <div id="google_translate_element"></div>
+
+  <!-- Top Clean Language Selector -->
+  <div class="max-w-3xl w-full flex flex-wrap items-center justify-between gap-3 mb-4 bg-white px-4 py-3 rounded-2xl border border-slate-200 shadow-sm">
     <div class="flex items-center gap-2">
-      <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">🌐 Select Language:</span>
-      <div id="google_translate_element"></div>
+      <span class="text-xs font-bold text-slate-600 uppercase tracking-wider flex items-center gap-1.5">
+        🌐 Choose Language:
+      </span>
+      <select id="customLangSelect" class="bg-slate-50 border border-slate-300 rounded-xl px-3 py-1.5 text-xs sm:text-sm font-semibold text-slate-700 outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer">
+        <option value="en">English (Default)</option>
+        <option value="hi">हिन्दी (Hindi)</option>
+        <option value="gu">ગુજરાતી (Gujarati)</option>
+        <option value="mr">मराठी (Marathi)</option>
+        <option value="bn">বাংলা (Bengali)</option>
+        <option value="ta">தமிழ் (Tamil)</option>
+        <option value="te">తెలుగు (Telugu)</option>
+        <option value="es">Español (Spanish)</option>
+        <option value="fr">Français (French)</option>
+        <option value="de">Deutsch (German)</option>
+        <option value="ar">العربية (Arabic)</option>
+        <option value="ru">Русский (Russian)</option>
+        <option value="pt">Português (Portuguese)</option>
+        <option value="ja">日本語 (Japanese)</option>
+        <option value="zh-CN">中文 (Chinese)</option>
+      </select>
     </div>
-    <span class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">
-      ⚡ 100+ World Languages Supported
+    <span class="text-[11px] font-semibold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+      ⚡ Instant Multi-Language
     </span>
   </div>
 
@@ -281,6 +292,20 @@
   </footer>
 
   <script>
+    // Custom Language Switcher Function
+    document.getElementById('customLangSelect').addEventListener('change', function() {
+      const lang = this.value;
+      const gtCombo = document.querySelector('.goog-te-combo');
+      if (gtCombo) {
+        gtCombo.value = lang;
+        gtCombo.dispatchEvent(new Event('change'));
+      } else {
+        // Fallback cookie method
+        document.cookie = `googtrans=/en/${lang}; path=/;`;
+        window.location.reload();
+      }
+    });
+
     // Populate Days (01 to 31)
     const daySelect = document.getElementById('dobDay');
     for (let i = 1; i <= 31; i++) {
