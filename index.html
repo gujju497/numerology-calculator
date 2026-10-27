@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Complete Numerology Calculator - Mulank, Bhagyank, Lucky Numbers & Career</title>
+  
+  <!-- GSC VERIFICATION TAG AGAR AAPNE LAGAYA THA TOH YAHAN RAKHEIN -->
+
   <meta name="description" content="In-depth free Numerology Calculator. Discover your Mulank, Bhagyank, Name Number, lucky colors, compatible numbers, career guidance, and life path traits.">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -24,13 +27,47 @@
     <!-- Inputs Card -->
     <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-6 space-y-4">
       <div>
-        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Full Name (As used officially)</label>
+        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Full Name (Optional)</label>
         <input type="text" id="userName" placeholder="e.g. Rahul Sharma" class="w-full p-3.5 bg-slate-50 border border-slate-300 rounded-xl font-medium focus:ring-2 focus:ring-amber-500 outline-none text-sm">
       </div>
 
+      <!-- Easy DD / MM / YYYY Selector -->
       <div>
-        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Date of Birth</label>
-        <input type="date" id="dobInput" class="w-full p-3.5 bg-slate-50 border border-slate-300 rounded-xl font-medium focus:ring-2 focus:ring-amber-500 outline-none text-sm">
+        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Date of Birth (DD / MM / YYYY)</label>
+        <div class="grid grid-cols-3 gap-2">
+          <!-- Day Dropdown -->
+          <div>
+            <select id="dobDay" class="w-full p-3 bg-slate-50 border border-slate-300 rounded-xl font-semibold text-slate-700 focus:ring-2 focus:ring-amber-500 outline-none text-sm">
+              <option value="">Day (DD)</option>
+            </select>
+          </div>
+
+          <!-- Month Dropdown -->
+          <div>
+            <select id="dobMonth" class="w-full p-3 bg-slate-50 border border-slate-300 rounded-xl font-semibold text-slate-700 focus:ring-2 focus:ring-amber-500 outline-none text-sm">
+              <option value="">Month</option>
+              <option value="1">01 - Jan</option>
+              <option value="2">02 - Feb</option>
+              <option value="3">03 - Mar</option>
+              <option value="4">04 - Apr</option>
+              <option value="5">05 - May</option>
+              <option value="6">06 - Jun</option>
+              <option value="7">07 - Jul</option>
+              <option value="8">08 - Aug</option>
+              <option value="9">09 - Sep</option>
+              <option value="10">10 - Oct</option>
+              <option value="11">11 - Nov</option>
+              <option value="12">12 - Dec</option>
+            </select>
+          </div>
+
+          <!-- Year Dropdown -->
+          <div>
+            <select id="dobYear" class="w-full p-3 bg-slate-50 border border-slate-300 rounded-xl font-semibold text-slate-700 focus:ring-2 focus:ring-amber-500 outline-none text-sm">
+              <option value="">Year (YYYY)</option>
+            </select>
+          </div>
+        </div>
       </div>
 
       <button id="calcBtn" class="w-full py-4 bg-amber-500 hover:bg-amber-600 active:scale-[0.99] text-white font-extrabold rounded-xl shadow-md transition text-base">
@@ -140,7 +177,7 @@
         <p class="text-xs sm:text-sm text-amber-800 leading-relaxed" id="warningBio"></p>
       </div>
 
-      <!-- Share Button -->
+      <!-- WhatsApp Share Button -->
       <button id="shareWaBtn" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-sm transition flex items-center justify-center gap-2 text-sm">
         <span>Share Report on WhatsApp</span> 📲
       </button>
@@ -154,6 +191,25 @@
   </footer>
 
   <script>
+    // Populate Days (1 to 31)
+    const daySelect = document.getElementById('dobDay');
+    for (let i = 1; i <= 31; i++) {
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = i < 10 ? '0' + i : i;
+      daySelect.appendChild(opt);
+    }
+
+    // Populate Years (Current Year down to 1930)
+    const yearSelect = document.getElementById('dobYear');
+    const currentYear = new Date().getFullYear();
+    for (let y = currentYear; y >= 1930; y--) {
+      const opt = document.createElement('option');
+      opt.value = y;
+      opt.textContent = y;
+      yearSelect.appendChild(opt);
+    }
+
     const chaldean = {
       A:1, I:1, J:1, Q:1, Y:1,
       B:2, K:2, R:2,
@@ -293,19 +349,20 @@
     }
 
     document.getElementById('calcBtn').addEventListener('click', () => {
-      const dobStr = document.getElementById('dobInput').value;
+      const day = parseInt(document.getElementById('dobDay').value, 10);
+      const month = parseInt(document.getElementById('dobMonth').value, 10);
+      const year = parseInt(document.getElementById('dobYear').value, 10);
       const name = document.getElementById('userName').value.trim();
 
-      if (!dobStr) {
-        alert("Please select your Date of Birth first.");
+      if (!day || !month || !year) {
+        alert("Please select Day, Month, and Year.");
         return;
       }
 
-      const [year, month, day] = dobStr.split('-').map(Number);
       const mulank = reduceToSingle(day);
       const bhagyank = reduceToSingle(day + month + year);
 
-      let nameNumber = 5; // default fallback if empty
+      let nameNumber = 5;
       if (name) {
         let nTotal = 0;
         const clean = name.toUpperCase().replace(/[^A-Z]/g, '');
@@ -358,7 +415,7 @@
       resBox.classList.remove('hidden');
       resBox.scrollIntoView({ behavior: 'smooth' });
 
-      // WhatsApp Share Setup
+      // WhatsApp Share
       document.getElementById('shareWaBtn').onclick = () => {
         const text = `🔮 My Numerology Report:\n• Mulank: ${mulank} (${m.lord})\n• Bhagyank: ${bhagyank} (${b.lord})\n• Lucky Colors: ${m.colors}\n• Best Career: ${b.career}\nCheck yours free here: ${window.location.href}`;
         window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
