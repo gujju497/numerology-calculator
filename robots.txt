@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://numerology-calculator.vercel.app/sitemap.xml
