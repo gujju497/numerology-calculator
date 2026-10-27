@@ -4,182 +4,272 @@
   <meta name="google-site-verification" content="dGlhq8QRg_lBUYmFqdeXj1dpswV9UuMjMFEZARpbapA" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Complete Numerology Calculator - Mulank, Bhagyank, Lucky Numbers & Career</title>
+  <title>Ultimate Numerology Master Report - Vedic & Chaldean Life Analysis</title>
   
-  <!-- GSC VERIFICATION TAG AGAR AAPNE LAGAYA THA TOH YAHAN RAKHEIN -->
+  <!-- APNA GOOGLE SEARCH CONSOLE VERIFICATION TAG YAHAN RAKHEIN -->
 
-  <meta name="description" content="In-depth free Numerology Calculator. Discover your Mulank, Bhagyank, Name Number, lucky colors, compatible numbers, career guidance, and life path traits.">
+  <meta name="description" content="Free Global Numerology Calculator with 100+ languages. In-depth analysis of Mulank, Bhagyank, Soul Urge, Wealth Luck, Health, Marriage, Career & Lucky Matrix.">
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    /* Clean Styling for Google Translate Widget */
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    body { top: 0px !important; }
+    #google_translate_element select {
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+      outline: none;
+      cursor: pointer;
+    }
+    .goog-logo-link { display: none !important; }
+    .goog-te-gadget { color: transparent !important; font-size: 0px !important; }
+    .goog-te-gadget span { display: none !important; }
+  </style>
+
+  <!-- Google Translate Global Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col items-center p-3 sm:p-6">
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col items-center p-3 sm:p-6 antialiased">
+
+  <!-- Top Language Bar & Notice -->
+  <div class="max-w-3xl w-full flex flex-wrap items-center justify-between gap-2 mb-4 bg-white px-4 py-2.5 rounded-2xl border border-slate-200 shadow-sm">
+    <div class="flex items-center gap-2">
+      <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">🌐 Select Language:</span>
+      <div id="google_translate_element"></div>
+    </div>
+    <span class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">
+      ⚡ 100+ World Languages Supported
+    </span>
+  </div>
 
   <!-- Header -->
-  <header class="max-w-2xl w-full text-center mb-6">
-    <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-bold mb-2 shadow-sm">
-      ✨ Complete Vedic & Chaldean System
+  <header class="max-w-3xl w-full text-center mb-6">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-100 text-amber-900 rounded-full text-xs font-extrabold mb-3 shadow-sm">
+      🔮 Deep Vedic & Chaldean Life-Path Analysis
     </div>
-    <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Complete Numerology Report</h1>
-    <p class="text-xs sm:text-sm text-slate-600 mt-1.5">Accurate Mulank, Bhagyank, Lucky Matrix, Compatibility & Career Predictions.</p>
+    <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Complete Life Numerology Master Report</h1>
+    <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-xl mx-auto">
+      An exhaustive life audit covering Mulank, Bhagyank, Karmic Lessons, Wealth Cycles, Love Compatibility, Health Warnings & Remedies.
+    </p>
   </header>
 
-  <main class="max-w-2xl w-full space-y-4">
+  <main class="max-w-3xl w-full space-y-5">
 
-    <!-- Inputs Card -->
-    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-6 space-y-4">
+    <!-- Input Card -->
+    <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-5 sm:p-8 space-y-5">
       <div>
-        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Full Name (Optional)</label>
-        <input type="text" id="userName" placeholder="e.g. Rahul Sharma" class="w-full p-3.5 bg-slate-50 border border-slate-300 rounded-xl font-medium focus:ring-2 focus:ring-amber-500 outline-none text-sm">
+        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Full Legal Name (For Chaldean Vibration)</label>
+        <input type="text" id="userName" placeholder="e.g. Rahul Sharma" class="w-full p-3.5 bg-slate-50 border border-slate-300 rounded-xl font-medium focus:ring-2 focus:ring-amber-500 outline-none text-sm transition">
       </div>
 
       <!-- Easy DD / MM / YYYY Selector -->
       <div>
-        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Date of Birth (DD / MM / YYYY)</label>
-        <div class="grid grid-cols-3 gap-2">
-          <!-- Day Dropdown -->
-          <div>
-            <select id="dobDay" class="w-full p-3 bg-slate-50 border border-slate-300 rounded-xl font-semibold text-slate-700 focus:ring-2 focus:ring-amber-500 outline-none text-sm">
-              <option value="">Day (DD)</option>
-            </select>
-          </div>
-
-          <!-- Month Dropdown -->
-          <div>
-            <select id="dobMonth" class="w-full p-3 bg-slate-50 border border-slate-300 rounded-xl font-semibold text-slate-700 focus:ring-2 focus:ring-amber-500 outline-none text-sm">
-              <option value="">Month</option>
-              <option value="1">01 - Jan</option>
-              <option value="2">02 - Feb</option>
-              <option value="3">03 - Mar</option>
-              <option value="4">04 - Apr</option>
-              <option value="5">05 - May</option>
-              <option value="6">06 - Jun</option>
-              <option value="7">07 - Jul</option>
-              <option value="8">08 - Aug</option>
-              <option value="9">09 - Sep</option>
-              <option value="10">10 - Oct</option>
-              <option value="11">11 - Nov</option>
-              <option value="12">12 - Dec</option>
-            </select>
-          </div>
-
-          <!-- Year Dropdown -->
-          <div>
-            <select id="dobYear" class="w-full p-3 bg-slate-50 border border-slate-300 rounded-xl font-semibold text-slate-700 focus:ring-2 focus:ring-amber-500 outline-none text-sm">
-              <option value="">Year (YYYY)</option>
-            </select>
-          </div>
+        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Date of Birth (Select Day, Month & Year)</label>
+        <div class="grid grid-cols-3 gap-2 sm:gap-3">
+          <select id="dobDay" class="w-full p-3.5 bg-slate-50 border border-slate-300 rounded-xl font-semibold text-slate-700 focus:ring-2 focus:ring-amber-500 outline-none text-sm cursor-pointer">
+            <option value="">Day (DD)</option>
+          </select>
+          <select id="dobMonth" class="w-full p-3.5 bg-slate-50 border border-slate-300 rounded-xl font-semibold text-slate-700 focus:ring-2 focus:ring-amber-500 outline-none text-sm cursor-pointer">
+            <option value="">Month (MM)</option>
+            <option value="1">01 - Jan</option>
+            <option value="2">02 - Feb</option>
+            <option value="3">03 - Mar</option>
+            <option value="4">04 - Apr</option>
+            <option value="5">05 - May</option>
+            <option value="6">06 - Jun</option>
+            <option value="7">07 - Jul</option>
+            <option value="8">08 - Aug</option>
+            <option value="9">09 - Sep</option>
+            <option value="10">10 - Oct</option>
+            <option value="11">11 - Nov</option>
+            <option value="12">12 - Dec</option>
+          </select>
+          <select id="dobYear" class="w-full p-3.5 bg-slate-50 border border-slate-300 rounded-xl font-semibold text-slate-700 focus:ring-2 focus:ring-amber-500 outline-none text-sm cursor-pointer">
+            <option value="">Year (YYYY)</option>
+          </select>
         </div>
       </div>
 
-      <button id="calcBtn" class="w-full py-4 bg-amber-500 hover:bg-amber-600 active:scale-[0.99] text-white font-extrabold rounded-xl shadow-md transition text-base">
-        Generate Full In-Depth Report 🔮
+      <button id="calcBtn" class="w-full py-4 bg-amber-500 hover:bg-amber-600 active:scale-[0.99] text-white font-extrabold rounded-2xl shadow-md transition text-base tracking-wide flex items-center justify-center gap-2">
+        <span>Generate Exhaustive Life Report</span> 🔮
       </button>
     </div>
 
     <!-- Results Section -->
-    <div id="resultBox" class="space-y-4 hidden">
+    <div id="resultBox" class="space-y-5 hidden">
 
-      <!-- Summary Top Banner -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 text-center">
-        <div class="bg-white p-3.5 rounded-xl border border-amber-200 shadow-sm">
-          <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 block">मूलांक (Mulank)</span>
-          <span class="text-3xl font-extrabold text-slate-900" id="topMulank">-</span>
-          <span class="text-[11px] text-slate-500 block font-medium" id="topMulankLord">-</span>
+      <!-- Master KPI Numbers Banner -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+        <div class="bg-white p-4 rounded-2xl border border-amber-200 shadow-sm">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 block">मूलांक (Root)</span>
+          <span class="text-3xl sm:text-4xl font-black text-slate-900 my-1 block" id="topMulank">-</span>
+          <span class="text-[11px] font-semibold text-slate-500 block truncate" id="topMulankLord">-</span>
         </div>
-        <div class="bg-white p-3.5 rounded-xl border border-indigo-200 shadow-sm">
-          <span class="text-[10px] font-bold uppercase tracking-wider text-indigo-600 block">भाग्यांक (Bhagyank)</span>
-          <span class="text-3xl font-extrabold text-slate-900" id="topBhagyank">-</span>
-          <span class="text-[11px] text-slate-500 block font-medium" id="topBhagyankLord">-</span>
+        <div class="bg-white p-4 rounded-2xl border border-indigo-200 shadow-sm">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-indigo-600 block">भाग्यांक (Destiny)</span>
+          <span class="text-3xl sm:text-4xl font-black text-slate-900 my-1 block" id="topBhagyank">-</span>
+          <span class="text-[11px] font-semibold text-slate-500 block truncate" id="topBhagyankLord">-</span>
         </div>
-        <div class="bg-white p-3.5 rounded-xl border border-emerald-200 shadow-sm col-span-2 sm:col-span-1">
-          <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 block">नेम नंबर (Name)</span>
-          <span class="text-3xl font-extrabold text-slate-900" id="topName">-</span>
-          <span class="text-[11px] text-slate-500 block font-medium" id="topNameLord">-</span>
+        <div class="bg-white p-4 rounded-2xl border border-emerald-200 shadow-sm">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 block">Name Number</span>
+          <span class="text-3xl sm:text-4xl font-black text-slate-900 my-1 block" id="topName">-</span>
+          <span class="text-[11px] font-semibold text-slate-500 block truncate" id="topNameLord">-</span>
+        </div>
+        <div class="bg-white p-4 rounded-2xl border border-rose-200 shadow-sm">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-rose-600 block">Soul Urge</span>
+          <span class="text-3xl sm:text-4xl font-black text-slate-900 my-1 block" id="topSoul">-</span>
+          <span class="text-[11px] font-semibold text-slate-500 block truncate">Vocal Vowels</span>
         </div>
       </div>
 
-      <!-- 1. Detailed Mulank Section -->
-      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-        <div class="flex items-center justify-between border-b border-slate-100 pb-2">
-          <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
-            ☀️ मूलांक (Birth Root Number): <span id="mNumBadge" class="text-amber-600"></span>
+      <!-- 1. Core Nature & Personality -->
+      <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+          <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            👤 1. Core Personality & Inner Psychology (मूलांक दर्शन)
           </h2>
-          <span class="text-xs bg-amber-50 text-amber-800 font-semibold px-2.5 py-1 rounded-md" id="mPlanet"></span>
+          <span class="text-xs bg-amber-50 text-amber-800 font-bold px-3 py-1 rounded-full border border-amber-200" id="mPlanetBadge"></span>
         </div>
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" id="mFullBio"></p>
+        <p class="text-sm text-slate-600 leading-relaxed" id="mCoreBio"></p>
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs text-slate-700 space-y-1">
+          <p><strong class="text-slate-900">Prime Superpower:</strong> <span id="mSuperpower"></span></p>
+          <p><strong class="text-slate-900">Hidden Instinct:</strong> <span id="mInstinct"></span></p>
+        </div>
       </div>
 
-      <!-- 2. Detailed Bhagyank Section -->
-      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-        <div class="flex items-center justify-between border-b border-slate-100 pb-2">
-          <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
-            🪐 भाग्यांक (Life Path Destiny): <span id="bNumBadge" class="text-indigo-600"></span>
+      <!-- 2. Destiny Path & Karmic Mission -->
+      <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+          <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            🌌 2. Destiny Mission & Karmic Debt (भाग्यांक व पूर्व जन्म संचित कर्म)
           </h2>
-          <span class="text-xs bg-indigo-50 text-indigo-800 font-semibold px-2.5 py-1 rounded-md" id="bPlanet"></span>
+          <span class="text-xs bg-indigo-50 text-indigo-800 font-bold px-3 py-1 rounded-full border border-indigo-200" id="bPlanetBadge"></span>
         </div>
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" id="bFullBio"></p>
+        <p class="text-sm text-slate-600 leading-relaxed" id="bMissionBio"></p>
+        <div class="bg-indigo-50/60 p-4 rounded-xl border border-indigo-100 text-xs text-indigo-900">
+          <strong>Karmic Lesson for this Lifetime:</strong> <span id="bKarmicLesson"></span>
+        </div>
       </div>
 
-      <!-- 3. Lucky Matrix Grid -->
-      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-        <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3 flex items-center gap-1.5">
-          💎 Lucky Matrix & Auspicious Factors
-        </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
-          <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
-            <span class="text-slate-400 block font-bold text-[10px] uppercase">Lucky Colors</span>
-            <span class="font-semibold text-slate-800 mt-0.5 block" id="matrixColors">-</span>
+      <!-- 3. Wealth, Finance & Money Karma -->
+      <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+          💰 3. Wealth Cycles, Money Karma & Financial Destiny
+        </h2>
+        <p class="text-sm text-slate-600 leading-relaxed" id="wealthBio"></p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs mt-2">
+          <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200 text-emerald-800">
+            <strong>Wealth Accumulation Strategy:</strong>
+            <p class="mt-1" id="wealthStrategy"></p>
           </div>
-          <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
-            <span class="text-slate-400 block font-bold text-[10px] uppercase">Lucky Days</span>
-            <span class="font-semibold text-slate-800 mt-0.5 block" id="matrixDays">-</span>
-          </div>
-          <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
-            <span class="text-slate-400 block font-bold text-[10px] uppercase">Lucky Dates</span>
-            <span class="font-semibold text-slate-800 mt-0.5 block" id="matrixDates">-</span>
-          </div>
-          <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
-            <span class="text-slate-400 block font-bold text-[10px] uppercase">Lucky Gem / Metal</span>
-            <span class="font-semibold text-slate-800 mt-0.5 block" id="matrixGems">-</span>
+          <div class="p-3 bg-rose-50 rounded-xl border border-rose-200 text-rose-800">
+            <strong>Financial Leakage Risk:</strong>
+            <p class="mt-1" id="wealthRisk"></p>
           </div>
         </div>
       </div>
 
-      <!-- 4. Compatibility & Relations -->
-      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-        <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
-          🤝 Number Compatibility (मित्र और शत्रु अंक)
-        </h3>
+      <!-- 4. Career, Business vs Employment Matrix -->
+      <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+          💼 4. Career Blueprint: Business vs Job Mastery
+        </h2>
+        <p class="text-sm text-slate-600 leading-relaxed" id="careerPathBio"></p>
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-1.5">
+          <p><strong class="text-slate-900">Optimal Business Sectors:</strong> <span id="topBizSectors" class="text-slate-700"></span></p>
+          <p><strong class="text-slate-900">Best Corporate Roles:</strong> <span id="topCorpRoles" class="text-slate-700"></span></p>
+          <p><strong class="text-slate-900">Working Style:</strong> <span id="workStyle" class="text-slate-700"></span></p>
+        </div>
+      </div>
+
+      <!-- 5. Love, Marriage & Romance Compatibility -->
+      <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+          ❤️ 5. Love, Marriage & Relationship Psychology
+        </h2>
+        <p class="text-sm text-slate-600 leading-relaxed" id="loveBio"></p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-          <div class="bg-emerald-50 border border-emerald-200 p-3.5 rounded-xl">
-            <span class="font-bold text-emerald-800 block text-xs mb-1">Friendly Numbers (शुभ संबंध):</span>
-            <p class="text-emerald-700" id="compatFriends"></p>
+          <div class="bg-pink-50 p-3.5 rounded-xl border border-pink-200 text-pink-900">
+            <strong>Best Compatible Marriage Matches:</strong>
+            <p class="mt-1 font-semibold" id="loveBestMatches"></p>
           </div>
-          <div class="bg-rose-50 border border-rose-200 p-3.5 rounded-xl">
-            <span class="font-bold text-rose-800 block text-xs mb-1">Challenging Numbers (सावधानी रखें):</span>
-            <p class="text-rose-700" id="compatEnemies"></p>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-slate-700">
+            <strong>High Friction & Ego Matches:</strong>
+            <p class="mt-1 font-semibold" id="loveClashMatches"></p>
           </div>
         </div>
       </div>
 
-      <!-- 5. Best Career Pathways -->
-      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-        <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
-          💼 Best Career & Business Sectors
-        </h3>
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" id="careerBio"></p>
+      <!-- 6. Health & Biological Energy Vulnerabilities -->
+      <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+          🩺 6. Physical Vitality & Health Precaution Protocol
+        </h2>
+        <p class="text-sm text-slate-600 leading-relaxed" id="healthBio"></p>
+        <div class="bg-amber-50/70 p-4 rounded-xl border border-amber-200 text-xs text-amber-900 space-y-1">
+          <p><strong>Vulnerable Body Organs / Systems:</strong> <span id="healthVulnerable"></span></p>
+          <p><strong>Holistic Health Advice:</strong> <span id="healthRemedy"></span></p>
+        </div>
       </div>
 
-      <!-- 6. Key Warnings & Life Advice -->
-      <div class="bg-amber-50 p-5 rounded-2xl border border-amber-200 shadow-sm space-y-2">
-        <h3 class="text-sm font-bold text-amber-900 uppercase tracking-wider flex items-center gap-1.5">
-          ⚠️ Key Life Advice & Precautions
-        </h3>
-        <p class="text-xs sm:text-sm text-amber-800 leading-relaxed" id="warningBio"></p>
+      <!-- 7. Auspicious Matrix & Astrological Talismans -->
+      <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+          💎 7. Complete Auspicious Matrix & Planetary Remedies
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+            <span class="text-slate-400 font-bold uppercase text-[10px] block">Auspicious Colors</span>
+            <span class="font-bold text-slate-800 mt-1 block" id="mColors">-</span>
+          </div>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+            <span class="text-slate-400 font-bold uppercase text-[10px] block">Auspicious Days</span>
+            <span class="font-bold text-slate-800 mt-1 block" id="mDays">-</span>
+          </div>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+            <span class="text-slate-400 font-bold uppercase text-[10px] block">Fortunate Dates</span>
+            <span class="font-bold text-slate-800 mt-1 block" id="mDates">-</span>
+          </div>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+            <span class="text-slate-400 font-bold uppercase text-[10px] block">Gemstone & Metal</span>
+            <span class="font-bold text-slate-800 mt-1 block" id="mGems">-</span>
+          </div>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+            <span class="text-slate-400 font-bold uppercase text-[10px] block">Ruling Direction</span>
+            <span class="font-bold text-slate-800 mt-1 block" id="mDirection">-</span>
+          </div>
+          <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+            <span class="text-slate-400 font-bold uppercase text-[10px] block">Deity Mantra</span>
+            <span class="font-bold text-slate-800 mt-1 block" id="mMantra">-</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Vital Life Warnings -->
+      <div class="bg-rose-50 border border-rose-200 p-6 rounded-3xl shadow-sm space-y-2">
+        <h2 class="text-base font-bold text-rose-900 flex items-center gap-2">
+          ⚠️ 8. Critical Behavioral Blindspots (जीवन में किन चीज़ों से बचें)
+        </h2>
+        <p class="text-xs sm:text-sm text-rose-800 leading-relaxed" id="criticalWarnings"></p>
       </div>
 
       <!-- WhatsApp Share Button -->
-      <button id="shareWaBtn" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-sm transition flex items-center justify-center gap-2 text-sm">
-        <span>Share Report on WhatsApp</span> 📲
+      <button id="shareWaBtn" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-2xl shadow-md transition flex items-center justify-center gap-2 text-sm">
+        <span>Share Detailed Report on WhatsApp</span> 📲
       </button>
 
     </div>
@@ -187,11 +277,11 @@
   </main>
 
   <footer class="mt-12 text-center text-xs text-slate-400 pb-8">
-    Calculations strictly follow ancient Vedic Numerology & Chaldean Expression systems.
+    Accurate Vedic Sanatan & Chaldean Vibration Algorithm. 100% Free & Unlimited.
   </footer>
 
   <script>
-    // Populate Days (1 to 31)
+    // Populate Days (01 to 31)
     const daySelect = document.getElementById('dobDay');
     for (let i = 1; i <= 31; i++) {
       const opt = document.createElement('option');
@@ -200,16 +290,17 @@
       daySelect.appendChild(opt);
     }
 
-    // Populate Years (Current Year down to 1930)
+    // Populate Years (Current Year down to 1925)
     const yearSelect = document.getElementById('dobYear');
-    const currentYear = new Date().getFullYear();
-    for (let y = currentYear; y >= 1930; y--) {
+    const curYear = new Date().getFullYear();
+    for (let y = curYear; y >= 1925; y--) {
       const opt = document.createElement('option');
       opt.value = y;
       opt.textContent = y;
       yearSelect.appendChild(opt);
     }
 
+    // Chaldean Numerology Key Values
     const chaldean = {
       A:1, I:1, J:1, Q:1, Y:1,
       B:2, K:2, R:2,
@@ -221,123 +312,261 @@
       F:8, P:8
     };
 
-    const data = {
+    const vowels = ['A', 'E', 'I', 'O', 'U'];
+
+    // Comprehensive Deep Vedic & Chaldean Database (1 to 9)
+    const db = {
       1: {
         lord: "Sun (सूर्य)",
-        mulankDesc: "Number 1 individuals are natural-born leaders, pioneers, and fiercely independent. You possess strong determination, immense willpower, and an ambition to reach the top. You prefer directing others rather than working under supervision.",
-        bhagyankDesc: "Your life path demands that you step into leadership and inventiveness. Your life tests you by forcing you to stand on your own feet. True success arrives when you overcome ego and inspire teams.",
-        colors: "Gold, Yellow, Copper, Orange",
-        days: "Sunday, Monday",
+        superpower: "Visionary Authority, Unstoppable Drive & Original Innovation",
+        instinct: "Refuses to be subordinate; naturally gravitates toward command and decision-making.",
+        coreBio: "Governed by the Sun, Number 1 individuals carry sovereign cosmic radiation. You are a natural pioneer, fearless creator, and strategic leader. You possess immense internal fortitude, clarity of thought, and high dignity. You dislike taking orders, micromanagement, or mediocrity, and you prefer standing alone over following a herd.",
+        missionBio: "Your destiny path challenges you to cultivate authentic self-reliance, transcend ego, and guide people from the front. Life will consistently force you into situations where you have no safety net, specifically designed to awaken your inner leadership and fearless execution.",
+        karmicLesson: "Learning humility without weakening leadership; mastering the fine line between firm authority and tyrannical stubbornness.",
+        wealthBio: "High wealth ceiling. You attract abundance through innovative start-ups, executive authority, government patronage, and intellectual property. You build capital rapidly, but your generous nature and expensive tastes can lead to sudden cash outlays.",
+        wealthStrategy: "Invest in gold, government securities, real estate, and scalable technological intellectual property.",
+        wealthRisk: "Lending money purely on ego or investing in high-risk vanity projects to impress peers.",
+        careerPathBio: "Exceptional in high-stakes positions. You thrive in entrepreneurship, CEO roles, civil administration, military leadership, surgical fields, and founding pioneering ventures.",
+        topBizSectors: "Technology, Luxury Commodities, Energy, Real Estate Development, Politics.",
+        topCorpRoles: "Chief Executive, Managing Director, Project Pioneer, General Manager.",
+        workStyle: "Autonomous, direct, assertive, and goal-oriented.",
+        loveBio: "Passionate, intensely protective, and fiercely loyal. In romance, you demand mutual respect and intellectual equality. However, you can struggle with vulnerability, often mistaking compromise for weakness.",
+        loveBestMatches: "Numbers 1, 2, 3, 5, 9",
+        loveClashMatches: "Numbers 6, 8 (Heavy ego clashes with Saturnian 8)",
+        healthBio: "Governed by the solar fire (Pitta dosha). Generally robust vital constitution with strong cardiovascular potential.",
+        healthVulnerable: "Heart, blood pressure fluctuations, eyesight issues, and migraines due to work stress.",
+        healthRemedy: "Practice Surya Namaskar at dawn, stay properly hydrated, and avoid excess spicy, acidic diets.",
+        colors: "Gold, Bright Yellow, Copper, Imperial Orange",
+        days: "Sunday & Monday",
         dates: "1, 10, 19, 28 of any month",
-        gems: "Ruby (माणिक), Copper/Gold",
-        friends: "1, 2, 3, 5, 9",
-        enemies: "8 (Strict neutrality/rivalry with Saturn), 6",
-        career: "Government positions, CEO, entrepreneurship, administration, politics, jewelry business, or leadership in armed forces.",
-        warning: "Guard against arrogance, over-dominance, and impulsive anger. Learn to listen to others before taking decisive steps."
+        gems: "Ruby (माणिक) set in Gold or Copper",
+        direction: "East (Purva)",
+        mantra: "Om Suryaya Namaha",
+        warnings: "Do not let professional pride isolate you emotionally. Listen to advisors before signing irreversible agreements."
       },
       2: {
         lord: "Moon (चंद्र)",
-        mulankDesc: "Number 2 is the emblem of diplomacy, imagination, and gentle emotional intelligence. You are intuitive, peace-loving, and perform best in cooperative partnerships rather than cut-throat conflicts.",
-        bhagyankDesc: "Your life destiny revolves around balancing relationships, mediation, and creative expression. You achieve lasting peace through emotional grounding and creative arts.",
-        colors: "White, Cream, Emerald Green",
-        days: "Monday, Friday",
+        superpower: "Profound Intuitive Empathy, Diplomatic Mastery & Creative Imagination",
+        instinct: "Senses unsaid emotions in any room; prefers peaceful collaboration over aggressive conflict.",
+        coreBio: "Governed by the Moon, Number 2 is the emblem of divine sensitivity, artistic depth, and profound emotional intellect. You are polite, perceptive, and naturally cooperative. Your imagination is boundless, making you an exceptional thinker, peacemaker, and diplomat. However, your emotional core fluctuates like the lunar phases.",
+        missionBio: "Your destiny path calls you to heal fractured relationships, bring harmony to chaotic environments, and create lasting artistic or humanitarian works. Life tests you through emotional trials to teach you inner detachment and unshakeable inner balance.",
+        karmicLesson: "Overcoming chronic self-doubt, hyper-sensitivity, and relying excessively on external validation.",
+        wealthBio: "Steady, accumulating wealth flow. Money comes through partnerships, consultative advisory, creative royalties, and liquid assets. You rarely chase money ruthlessly, yet gentle abundance flows when you trust your intuitive hunches.",
+        wealthStrategy: "Diversify into dairy, water resources, creative arts, counseling academies, and diversified mutual funds.",
+        wealthRisk: "Allowing cunning partners to take financial credit or cheat you due to your trusting nature.",
+        careerPathBio: "Flourishes in supportive, creative, or communicative environments. You make an extraordinary psychologist, diplomat, novelist, painter, human resource director, or healthcare leader.",
+        topBizSectors: "Hospitality, Counseling, Import-Export of Liquids/Chemicals, Fine Arts, Public Relations.",
+        topCorpRoles: "Chief People Officer (HR), Chief Mediator, Brand Strategist, Creative Producer.",
+        workStyle: "Collaborative, patient, thoughtful, and peace-preserving.",
+        loveBio: "Deeply romantic, caring, and sentimental. You seek emotional soul connection over superficial attraction. You shower your partner with devotion, but can become possessive and moody if you sense emotional coldness.",
+        loveBestMatches: "Numbers 1, 2, 3, 5",
+        loveClashMatches: "Numbers 4, 8, 9 (Brutal clashes with aggressive temperaments)",
+        healthBio: "Governed by lunar moisture (Kapha dosha). Susceptible to psychosomatic conditions linked to emotional stress.",
+        healthVulnerable: "Stomach, digestive sensitivity, respiratory infections, and lymphatic circulation.",
+        healthRemedy: "Consume water from silver vessels, meditate under moonlight, and avoid eating heavy meals late at night.",
+        colors: "Milky White, Cream, Pearl Green, Silver",
+        days: "Monday & Friday",
         dates: "2, 11, 20, 29 of any month",
-        gems: "Pearl (मोती), Moonstone, Silver",
-        friends: "1, 2, 3, 5",
-        enemies: "4, 8, 9",
-        career: "Psychology, writing, diplomacy, public relations, hospitality, dairy/liquid products, art, and counseling.",
-        warning: "Avoid over-sensitivity, mood swings, and self-doubt. Do not let others exploit your polite and accommodating nature."
+        gems: "Natural Pearl (मोती) or Moonstone in Silver",
+        direction: "North-West (Vayavya)",
+        mantra: "Om Chandraya Namaha",
+        warnings: "Never sign financial contracts during periods of heavy emotional turmoil or depression."
       },
       3: {
         lord: "Jupiter (बृहस्पति / गुरु)",
-        mulankDesc: "Number 3 is governed by Jupiter, granting deep wisdom, natural optimism, teaching ability, and intellectual curiosity. You love knowledge, discipline, and helping others grow.",
-        bhagyankDesc: "Your life path encourages mentorship, philosophy, creative education, and institutional expansion. You are destined to leave an intellectual legacy.",
-        colors: "Yellow, Bright Saffron, Violet",
+        superpower: "Expansive Wisdom, Eloquent Expression & Natural Mentorship",
+        instinct: "Endless thirst for knowledge, optimism, philosophical debate, and advising others.",
+        coreBio: "Governed by Jupiter (Guru), Number 3 possesses radiant intellect, expansive vision, and unyielding optimism. You are an orator, educator, and visionary thinker. You carry an honorable aura and an inherent moral compass. People naturally seek your advice because you see the grander cosmic picture where others only see immediate roadblocks.",
+        missionBio: "Your soul path demands that you spread truthful knowledge, uplift communities, and establish ethical educational, legal, or spiritual frameworks. You are born to be a beacon of guidance for lost souls.",
+        karmicLesson: "Eliminating preachiness, intellectual arrogance, and spreading focus too thin across multiple unfinished projects.",
+        wealthBio: "Large financial prosperity potential. You generate fortune through teaching, intellectual publications, advisory consultancy, finance, and institutional expansion. Money comes effortlessly when you serve the collective good.",
+        wealthStrategy: "Invest in higher education institutes, publishing, ethical stocks, and long-term land holdings.",
+        wealthRisk: "Careless budgeting, excessive optimism regarding unverified ventures, and over-generous donations.",
+        careerPathBio: "Thrives in academia, supreme legal advisory, finance, ministry, corporate consulting, literature, and spiritual thought leadership.",
+        topBizSectors: "Publishing, Higher Education, Legal Chambers, Wealth Management, Philanthropic Foundations.",
+        topCorpRoles: "Chief Legal Counsel, Chief Knowledge Officer, Executive Coach, Financial Advisor.",
+        workStyle: "Inspiring, broad-minded, conceptual, and principles-first.",
+        loveBio: "Values intellectual companionship above all. You need a partner who can match your mental curiosity and respect your independent thoughts. You are loyal and joyful, though you can inadvertently act preachy at home.",
+        loveBestMatches: "Numbers 1, 2, 3, 9",
+        loveClashMatches: "Numbers 6 (Jupiter-Venus ideological polarity), 7",
+        healthBio: "Governed by expansive warmth and liver functions. Tendency toward weight gain and metabolic slowdown in later years.",
+        healthVulnerable: "Liver, arterial health, thighs, and nervous strain from endless intellectual overthinking.",
+        healthRemedy: "Practice fasting on Thursdays, drink turmeric milk, and engage in daily physical brisk walking.",
+        colors: "Bright Golden Yellow, Saffron, Royal Purple",
         days: "Thursday",
         dates: "3, 12, 21, 30 of any month",
-        gems: "Yellow Sapphire (पुखराज), Gold",
-        friends: "1, 2, 3, 9",
-        enemies: "6 (Venus-Jupiter ideological clash), 7",
-        career: "Education, legal affairs, advisory, coaching, finance, spiritual mentorship, literature, and banking.",
-        warning: "Watch out for over-spending, preachy behavior, or scattering your energy across too many projects simultaneously."
+        gems: "Yellow Sapphire (पुखराज) set in pure Gold",
+        direction: "North-East (Ishanya)",
+        mantra: "Om Brihaspataye Namaha",
+        warnings: "Avoid financial speculation based purely on optimistic intuition without checking mathematical ledgers."
       },
       4: {
         lord: "Rahu (राहु)",
-        mulankDesc: "Number 4 represents hard work, unconventional thinking, sharp logic, and high discipline. You question traditions, build rock-solid foundations, and achieve unexpected breakthroughs.",
-        bhagyankDesc: "Your life path is marked by sudden shifts, structural mastery, and endurance. Patience is your strongest asset to build wealth and lasting legacy.",
-        colors: "Electric Blue, Grey, Khaki",
-        days: "Saturday, Sunday",
+        superpower: "Unconventional Genius, Systemic Architecture & Relentless Work Ethic",
+        instinct: "Challenges outdated traditions; spots structural flaws and creates groundbreaking alternate systems.",
+        coreBio: "Governed by Rahu, Number 4 is the radical architect, systematic realist, and master of unexpected disruptions. You possess a unique vision that does not conform to routine societal rules. You are fiercely hardworking, highly critical, disciplined, and resilient against adversity. While the world may view you as stubborn, you are simply constructing lasting realities.",
+        missionBio: "Your destiny path forces you through sudden life upheavals, unconventional problems, and radical breakthroughs. You are tasked with bringing stability to chaos and building revolutionary structures for the future.",
+        karmicLesson: "Releasing chronic pessimism, softening defensive aggression, and learning to adapt to unexpected systemic changes.",
+        wealthBio: "Characterized by sudden shifts. You experience sudden windfalls and sudden unexpected expenditures. Long-term wealth is built slowly through discipline, tech disruption, systematic compounding, and patents.",
+        wealthStrategy: "Focus on cybersecurity, infrastructure, industrial manufacturing, data engineering, and automation.",
+        wealthRisk: "Speculative gambling, crypto day-trading, and trusting shortcuts promised by shady brokers.",
+        careerPathBio: "Dominates in cutting-edge technology, mechanical engineering, data architecture, investigative journalism, and logistics management.",
+        topBizSectors: "Information Security, Civil Construction, Aviation, Heavy Engineering, Supply Chain Systems.",
+        topCorpRoles: "Chief Technology Officer (CTO), Chief Operating Officer (COO), Lead Auditor, Forensic Investigator.",
+        workStyle: "Methodical, hyper-detailed, persistent, and unyielding.",
+        loveBio: "Cautious and guarded in love. You do not fall in love easily, but once committed, you are rock-solid and endlessly supportive. You struggle to express romantic poetry, preferring practical acts of service.",
+        loveBestMatches: "Numbers 5, 6, 7, 8",
+        loveClashMatches: "Numbers 1, 2, 9 (Severe ideological resistance and authority friction)",
+        healthBio: "Governed by nervous and electro-magnetic currents (Vata dosha). Tendency toward mysterious, unexplainable ailments.",
+        healthVulnerable: "Lower limbs, respiratory breathlessness, nervous tension, and insomnia.",
+        healthRemedy: "Regular earthing (walking barefoot on grass), pranayama, and avoiding electromagnetic screens before sleep.",
+        colors: "Electric Blue, Steel Grey, Khaki, Shadow Black",
+        days: "Saturday & Sunday",
         dates: "4, 13, 22, 31 of any month",
-        gems: "Hessonite Garnet (गोमेद), Silver/Alloy",
-        friends: "5, 6, 7, 8",
-        enemies: "1, 2, 9",
-        career: "Software technology, civil engineering, data analysis, research, architecture, trading, and logistics.",
-        warning: "Do not get trapped in stubbornness or extreme skepticism. Avoid short-cut get-rich-quick schemes."
+        gems: "Hessonite Garnet (गोमेद) in Silver or Ashtadhatu",
+        direction: "South-West (Nairutya)",
+        mantra: "Om Rahave Namaha",
+        warnings: "Never engage in illegal shortcuts or tax evasion; Rahu strictly penalizes cutting ethical corners."
       },
       5: {
         lord: "Mercury (बुध)",
-        mulankDesc: "Number 5 is the number of sharp intellect, speed, communication, and adaptability. You are versatile, witty, quick-decision maker, and thrive on commerce and travel.",
-        bhagyankDesc: "Your destiny revolves around constant evolution, networking, sales, and freedom. You excel when given autonomy without rigid cubicle limits.",
-        colors: "Light Green, Turquoise, Pastel shades",
-        days: "Wednesday, Friday",
+        superpower: "Dynamic Agility, High-Velocity Commerce & Magnetic Oratory",
+        instinct: "Thrives on freedom, rapid travel, multi-tasking, and converting words into currency.",
+        coreBio: "Governed by Mercury (Budh), Number 5 is the cosmic merchant, rapid thinker, and energetic networker. You possess unmatched wit, adaptability, and resilience—bouncing back from crises faster than any other number. You get bored by mundane routines and thrive when managing multiple ventures, negotiations, and intellectual puzzles.",
+        missionBio: "Your destiny path urges you to be the catalyst for commerce, communication, and social connection. You are destined to master freedom with responsibility, showing that versatility can achieve monumental success.",
+        karmicLesson: "Cultivating patience, finishing initiated projects before jumping to new shiny ideas, and balancing restlessness.",
+        wealthBio: "Rapid wealth velocity. You possess natural business instincts and the uncanny ability to spot monetary value in negotiations. You build wealth through digital media, trading, brokerage, tech ventures, and marketing.",
+        wealthStrategy: "High-liquidity instruments, commercial e-commerce platforms, affiliate ecosystems, and international trade.",
+        wealthRisk: "Over-leveraged financial speculation, stock-market gambling, and impulsive lifestyle spending.",
+        careerPathBio: "Unbeatable in sales, international trade, marketing, digital media publishing, journalism, public relations, and brokerage.",
+        topBizSectors: "E-commerce, Media Networks, Foreign Exchange, Travel, Advertising Agencies.",
+        topCorpRoles: "Chief Marketing Officer (CMO), Head of Global Sales, Chief Commercial Officer, Media Director.",
+        workStyle: "Fast, versatile, communicative, and boundary-pushing.",
+        loveBio: "Playful, charming, and intellectually stimulating. You require a partner who gives you emotional freedom and never suffocates you with routine possessiveness. You are exciting to live with, though you can be emotionally elusive.",
+        loveBestMatches: "Numbers 1, 3, 5, 6",
+        loveClashMatches: "Numbers 2, 4 (Emotional drama or excessive rigidity drains you)",
+        healthBio: "Governed by the nervous system and cerebral cortex. Prone to mental exhaustion due to a hyperactive brain.",
+        healthVulnerable: "Nerves, speech cords, bronchial tubes, hands, and digestive anxiety.",
+        healthRemedy: "Spend time in green nature, drink herbal mint teas, and maintain fixed sleeping schedules.",
+        colors: "Emerald Green, Bright Turquoise, Mint, Pastel Tones",
+        days: "Wednesday & Friday",
         dates: "5, 14, 23 of any month",
-        gems: "Emerald (पन्ना), Bronze/Silver",
-        friends: "1, 3, 5, 6",
-        enemies: "2, 4 (Usually friendly to all, but emotional drama drains you)",
-        career: "Digital marketing, e-commerce, brokerage, journalism, traveling, public speaking, trading, and IT.",
-        warning: "Avoid restlessness, gambling mindset, and starting projects without finishing the previous ones."
+        gems: "Natural Emerald (पन्ना) set in Gold or Bronze",
+        direction: "North (Uttara)",
+        mantra: "Om Budhaya Namaha",
+        warnings: "Guard against scattered focus and promising more in commercial deals than you can realistically deliver."
       },
       6: {
         lord: "Venus (शुक्र)",
-        mulankDesc: "Number 6 represents luxury, aesthetic taste, love, family responsibility, and magnetic charisma. You have an eye for beauty, harmony, design, and emotional bonding.",
-        bhagyankDesc: "Your life path demands service to community, creative artistry, hospitality, and creating luxurious balance. You attract wealth through personal charm.",
-        colors: "Baby Pink, Sky Blue, Sparkling White",
+        superpower: "Aesthetic Magnetism, Unconditional Nurturing & Harmonic Luxury",
+        instinct: "Naturally curates beauty, protects loved ones, and elevates living standards to refined elegance.",
+        coreBio: "Governed by Venus (Shukra), Number 6 radiates warmth, grace, exquisite aesthetic taste, and domestic responsibility. You have an eye for luxury, design, harmonious music, and balanced living. People feel comforted in your presence because you are a natural protector, generous host, and magnetic peacemaker.",
+        missionBio: "Your soul path demands that you establish peace, elevate societal aesthetics, take on domestic responsibility, and serve community harmony. You attract abundance when you build uplifting, beautiful spaces for humanity.",
+        karmicLesson: "Overcoming martyrdom, stopping meddlesome interference in others' lives, and refusing to let vanity control your decisions.",
+        wealthBio: "Enormous luxury prosperity potential. Wealth flows to you through artistic industries, luxury goods, beauty, hospitality, fine dining, and entertainment. People happily pay for your taste and refined presentation.",
+        wealthStrategy: "Invest in high-end residential real estate, luxury interior firms, jewelry, cosmetics, and fine hospitality.",
+        wealthRisk: "Excessive luxury spending, expensive personal gifts to keep up appearances, and indulgence in comfort over duty.",
+        careerPathBio: "Excels in interior architecture, fashion design, cinema, culinary arts, high-end hospitality, diplomatic hosting, and wellness.",
+        topBizSectors: "Fashion Couture, Interior Design, High-End Dining, Cosmetics, Entertainment Studios.",
+        topCorpRoles: "Creative Director, Hospitality Head, Chief Experience Officer (CXO), Brand Ambassador.",
+        workStyle: "Harmonious, team-nurturing, quality-focused, and elegant.",
+        loveBio: "The quintessential lover and committed spouse. Family and romance are sacred to you. You are romantic, attentive, and lavish your partner with affection. However, you can become smothering or jealous if unappreciated.",
+        loveBestMatches: "Numbers 3, 4, 5, 6, 8",
+        loveClashMatches: "Numbers 1, 3 (Occasional ideological clashes with pure ascetics)",
+        healthBio: "Governed by Venusian fluids and sensory indulgence. Potential for hormonal or sugar balance challenges.",
+        healthVulnerable: "Throat, kidneys, reproductive vitality, and sugar metabolism.",
+        healthRemedy: "Avoid excessive refined sugars, drink plenty of structured spring water, and practice regular vocal singing or chanting.",
+        colors: "Baby Pink, Sky Blue, Sparkling Silver, Pure White",
         days: "Friday",
         dates: "6, 15, 24 of any month",
-        gems: "Diamond, White Zircon, Silver/Platinum",
-        friends: "4, 5, 6, 8",
-        enemies: "1, 3 (Jupiter opposes worldly luxury focus)",
-        career: "Fashion, interior design, luxury products, film/media, hotels, food & beverage, music, and cosmetics.",
-        warning: "Beware of indulgence in over-spending, laziness, or excessive interference in other people's family matters."
+        gems: "Diamond (हीरा) or White Zircon in Platinum/Silver",
+        direction: "South-East (Agneya)",
+        mantra: "Om Shukraya Namaha",
+        warnings: "Do not sacrifice your life's personal ambitions merely to please ungrateful family members or partners."
       },
       7: {
         lord: "Ketu (केतु)",
-        mulankDesc: "Number 7 is deeply philosophical, intuitive, research-driven, and mystical. You are an observer who sees beyond the superficial layers of life and values solitude.",
-        bhagyankDesc: "Your destiny path guides you to deeper truths, scientific invention, spiritual mastery, and uncovering hidden knowledge.",
-        colors: "Light Green, White, Silver, Light Grey",
-        days: "Thursday, Monday",
+        superpower: "Spiritual Clairvoyance, Deep Scientific Forensics & Mystical Solitude",
+        instinct: "Pierces through falsehoods and illusions; demands absolute truth, research, and quiet introspection.",
+        coreBio: "Governed by Ketu, Number 7 is the philosopher, scientific monk, and mystical detective. You see through superficial pretenses and instinctively understand the hidden laws of nature. You are independent, analytical, introverted, and intuitive. You value solitude over crowded networking, often possessing profound gifts in occult, scientific research, or deep literature.",
+        missionBio: "Your destiny path calls you to uncover hidden truths, discover scientific or spiritual breakthroughs, and guide humanity past superficial materialism. You are destined to master spiritual detachment while living in the physical world.",
+        karmicLesson: "Overcoming cynical escapism, melancholy depression, emotional coldness, and excessive social isolation.",
+        wealthBio: "Unique wealth dynamics. You are generally unattached to raw money, yet abundance arrives when you monetize specialized expertise, patented research, spiritual counseling, or analytical inventions.",
+        wealthStrategy: "Invest in niche research laboratories, intellectual publications, precious antiques, and algorithmic data assets.",
+        wealthRisk: "Neglecting worldly financial contracts or letting business partners manage funds without audit.",
+        careerPathBio: "Dominates in scientific R&D, data forensic investigation, cybersecurity, metaphysical sciences, academic research, and philosophy.",
+        topBizSectors: "Data Forensics, Research Labs, Metaphysical Academies, Literature, Medical Diagnostics.",
+        topCorpRoles: "Chief Scientist, Principal Researcher, Lead Security Architect, Philosophical Advisor.",
+        workStyle: "Quiet, independent, perfectionist, and intensely deep.",
+        loveBio: "Complex, reserved, and deeply spiritual. You need a partner who understands your urgent need for solitude and quiet reading. If your partner respects your mental boundaries, you offer unwavering loyalty and spiritual depth.",
+        loveBestMatches: "Numbers 4, 5, 6, 8",
+        loveClashMatches: "Numbers 1, 2, 9 (Superficial noise and high tempers deeply irritate you)",
+        healthBio: "Governed by subtle spiritual energies. Extremely sensitive to atmospheric toxicity and food purity.",
+        healthVulnerable: "Skin sensitivities, subconscious insomnia, allergies, and psychic fatigue.",
+        healthRemedy: "Practice deep silent meditation (Dhyana), live near pure water or mountains, and maintain absolute satvik dietary habits.",
+        colors: "Light Green, Silver Grey, Snow White, Pale Yellow",
+        days: "Monday & Thursday",
         dates: "7, 16, 25 of any month",
-        gems: "Cat's Eye (लहसुनिया), Silver",
-        friends: "4, 5, 6, 8",
-        enemies: "1, 2, 9",
-        career: "Scientific research, astrology/occult, data security, writing, philosophy, forensics, and investigation.",
-        warning: "Guard against cynical depression, escapism, and isolating yourself excessively from society."
+        gems: "Cat's Eye (लहसुनिया) set in Silver",
+        direction: "North-East or North-West",
+        mantra: "Om Ketave Namaha",
+        warnings: "Never suppress unresolved emotional traumas; express feelings rather than withdrawing into complete silence."
       },
       8: {
         lord: "Saturn (शनि)",
-        mulankDesc: "Number 8 represents patience, karma, perseverance, and worldly authority. Your success often arrives through rigorous discipline and facing life head-on.",
-        bhagyankDesc: "Your path is focused on institutional management, real estate, justice, and long-term financial empire building. Steady effort brings massive rewards.",
-        colors: "Dark Blue, Black, Steel Grey",
+        superpower: "Karmic Endurance, Supreme Institutional Mastery & Monumental Wealth Building",
+        instinct: "Understands the ruthless reality of time, work, justice, and long-term consequence.",
+        coreBio: "Governed by Saturn (Shani), Number 8 carries the heaviest karmic weight and the greatest worldly reward. You are the ultimate master of perseverance, structural governance, justice, and endurance. Life rarely gives you free handouts; you earn every single inch of territory through relentless labor, resilience, and stoic determination. You build financial empires that outlast generations.",
+        missionBio: "Your soul path forces you through severe trials in early life to forge an unbreakable character. You are destined to administer massive resources, dispense justice, and build enduring institutions that serve the masses.",
+        karmicLesson: "Eliminating bitterness toward early hardships, releasing unforgiving vindictiveness, and softening harsh authority.",
+        wealthBio: "Monumental wealth potential, typically compounding heavily after age 35 to 40. You are built for massive capital accumulation, heavy industries, real estate portfolios, and generational asset trusts.",
+        wealthStrategy: "Acquire heavy machinery, commercial land, mining assets, iron & steel industries, and long-term infrastructure holdings.",
+        wealthRisk: "Legal litigation expenses, holding onto dying industrial assets too long, and aggressive corporate rivalries.",
+        careerPathBio: "Unrivaled in heavy industries, judicial courts, corporate restructuring, real estate development, manufacturing, and high finance.",
+        topBizSectors: "Commercial Real Estate, Heavy Metallurgy, Legal Administration, Mining, Asset Management.",
+        topCorpRoles: "Chief Executive Officer (CEO), Chief Restructuring Officer, Supreme Judge, Managing Trustee.",
+        workStyle: "Relentless, disciplined, demanding, and uncompromisingly fair.",
+        loveBio: "Quiet, steadfast, and fiercely dedicated. You rarely express fluffy romantic clichés, expressing love through practical security, financial shelter, and lifetime loyalty. You need a patient partner who sees your golden heart beneath the stoic exterior.",
+        loveBestMatches: "Numbers 3, 4, 5, 6, 7",
+        loveClashMatches: "Numbers 1, 2, 9 (Severe explosive clashes with Sun and Mars temperaments)",
+        healthBio: "Governed by bone structure, joints, and nervous endurance (Vata dosha).",
+        healthVulnerable: "Joints, knees, teeth, chronic rheumatics, and physical fatigue from non-stop overwork.",
+        healthRemedy: "Massage with pure sesame oil (Abhyanga), maintain steady hydration, and strictly honor rest days.",
+        colors: "Dark Navy Blue, Steel Grey, Midnight Black",
         days: "Saturday",
         dates: "8, 17, 26 of any month",
-        gems: "Blue Sapphire (नीलम), Amethyst, Iron",
-        friends: "4, 5, 6, 7",
-        enemies: "1 (Sun vs Saturn rivalry), 2, 9",
-        career: "Real estate, heavy industries, law, mining, iron & steel, long-term investments, and judicial administration.",
-        warning: "Avoid pessimism, holding long grudges, and neglecting personal health while chasing career targets."
+        gems: "Blue Sapphire (नीलम) or Amethyst set in Iron/White Gold (after trial)",
+        direction: "West (Pashchima)",
+        mantra: "Om Sham Shanaishcharaya Namaha",
+        warnings: "Never exploit subordinate workers or breach ethical integrity; Saturn’s karmic punishment for dishonesty is absolute."
       },
       9: {
         lord: "Mars (मंगल)",
-        mulankDesc: "Number 9 is fierce, courageous, humanitarian, and highly energetic. You have immense stamina, protective instincts, and a fiery desire to champion causes.",
-        bhagyankDesc: "Your destiny is to lead humanitarian breakthroughs, protect the vulnerable, and execute high-energy endeavors with courage.",
-        colors: "Red, Crimson, Coral Pink",
+        superpower: "Heroic Courage, Unstoppable Vitality & Humanitarian Championing",
+        instinct: "Runs toward fire when others run away; defends the weak and demolishes unjust obstacles.",
+        coreBio: "Governed by Mars (Mangal), Number 9 is the fiery warrior, compassionate protector, and universal humanitarian. You possess immense physical stamina, moral courage, and fiery drive. You cannot tolerate injustice, oppression, or weakness. You are generous to a fault, quick to anger, but equally quick to forgive. You finish the karmic cycle of single-digit numbers.",
+        missionBio: "Your destiny path challenges you to conquer aggressive rage, master emotional self-control, and dedicate your fiery energy to uplifting humanity. You are destined to fight battles on behalf of those who cannot fight for themselves.",
+        karmicLesson: "Taming explosive anger, rash physical recklessness, and burning bridges during temporary conflicts.",
+        wealthBio: "High earning power coupled with high humanitarian outflow. Money comes through big contracting projects, sports, defense, engineering, and energetic leadership. You earn millions and freely donate to causes you believe in.",
+        wealthStrategy: "Invest in civil infrastructure, construction contracting, sports franchises, and agricultural land development.",
+        wealthRisk: "Impulsive financial decisions taken in anger or giving loans to untrustworthy friends out of emotional generosity.",
+        careerPathBio: "Thrives in military leadership, emergency trauma surgery, athletic coaching, civil construction, political campaigning, and engineering.",
+        topBizSectors: "Civil Contracting, Defense Equipment, Sports Athletics, Heavy Machinery, Emergency Services.",
+        topCorpRoles: "Chief Operations Commander, Head of Security & Risk, Project Director, Lead Surgeon.",
+        workStyle: "Energetic, urgent, daring, and action-demanding.",
+        loveBio: "Fiery, intense, and deeply protective. You love with heroic devotion and will defend your partner against the world. However, your fiery temper and impatience require a calm, emotionally stable partner who does not pour oil on your flames.",
+        loveBestMatches: "Numbers 1, 2, 3, 5",
+        loveClashMatches: "Numbers 4, 7, 8 (Clashing temperaments with rigid Saturn & Rahu)",
+        healthBio: "Governed by internal heat, blood circulation, and muscular vitality (High Pitta dosha).",
+        healthVulnerable: "High blood pressure, burns, cuts, inflammation, and surgical interventions.",
+        healthRemedy: "Drink cool coconut water, avoid excessive red meats/chili, and channel surplus fire into daily heavy workouts.",
+        colors: "Deep Crimson Red, Scarlet, Coral Pink",
         days: "Tuesday",
         dates: "9, 18, 27 of any month",
-        gems: "Red Coral (मूंगा), Copper/Gold",
-        friends: "1, 2, 3, 5",
-        enemies: "4, 7, 8 (Clashing temperaments)",
-        career: "Defense, surgery, sports, civil contracts, manufacturing, emergency services, and mechanical engineering.",
-        warning: "Control high temper, rash driving, and hasty decisions taken in emotional rage."
+        gems: "Red Coral (मूंगा) set in Copper or Gold",
+        direction: "South (Dakshina)",
+        mantra: "Om Mangalaya Namaha",
+        warnings: "Never drive or operate dangerous machinery when emotionally infuriated; master the power of deep pause."
       }
     };
 
@@ -362,21 +591,28 @@
       const mulank = reduceToSingle(day);
       const bhagyank = reduceToSingle(day + month + year);
 
-      let nameNumber = 5;
+      let nameNumber = mulank;
+      let soulUrgeNumber = bhagyank;
+
       if (name) {
         let nTotal = 0;
+        let vTotal = 0;
         const clean = name.toUpperCase().replace(/[^A-Z]/g, '');
         for (let ch of clean) {
-          if (chaldean[ch]) nTotal += chaldean[ch];
+          if (chaldean[ch]) {
+            nTotal += chaldean[ch];
+            if (vowels.includes(ch)) {
+              vTotal += chaldean[ch];
+            }
+          }
         }
-        nameNumber = nTotal > 0 ? reduceToSingle(nTotal) : mulank;
-      } else {
-        nameNumber = mulank;
+        if (nTotal > 0) nameNumber = reduceToSingle(nTotal);
+        if (vTotal > 0) soulUrgeNumber = reduceToSingle(vTotal);
       }
 
-      const m = data[mulank];
-      const b = data[bhagyank];
-      const n = data[nameNumber];
+      const m = db[mulank];
+      const b = db[bhagyank];
+      const n = db[nameNumber];
 
       // Top Counters
       document.getElementById('topMulank').textContent = mulank;
@@ -384,40 +620,60 @@
       document.getElementById('topBhagyank').textContent = bhagyank;
       document.getElementById('topBhagyankLord').textContent = b.lord;
       document.getElementById('topName').textContent = name ? nameNumber : '-';
-      document.getElementById('topNameLord').textContent = name ? n.lord : 'Name not given';
+      document.getElementById('topNameLord').textContent = name ? n.lord : 'Optional';
+      document.getElementById('topSoul').textContent = name ? soulUrgeNumber : '-';
 
-      // 1. Mulank Section
-      document.getElementById('mNumBadge').textContent = `${mulank}`;
-      document.getElementById('mPlanet').textContent = `Governed by ${m.lord}`;
-      document.getElementById('mFullBio').textContent = m.mulankDesc;
+      // 1. Personality
+      document.getElementById('mPlanetBadge').textContent = `Lord: ${m.lord}`;
+      document.getElementById('mCoreBio').textContent = m.coreBio;
+      document.getElementById('mSuperpower').textContent = m.superpower;
+      document.getElementById('mInstinct').textContent = m.instinct;
 
-      // 2. Bhagyank Section
-      document.getElementById('bNumBadge').textContent = `${bhagyank}`;
-      document.getElementById('bPlanet').textContent = `Destiny Path of ${b.lord}`;
-      document.getElementById('bFullBio').textContent = b.bhagyankDesc;
+      // 2. Destiny & Mission
+      document.getElementById('bPlanetBadge').textContent = `Destiny Lord: ${b.lord}`;
+      document.getElementById('bMissionBio').textContent = b.missionBio;
+      document.getElementById('bKarmicLesson').textContent = b.karmicLesson;
 
-      // 3. Matrix
-      document.getElementById('matrixColors').textContent = m.colors;
-      document.getElementById('matrixDays').textContent = m.days;
-      document.getElementById('matrixDates').textContent = m.dates;
-      document.getElementById('matrixGems').textContent = m.gems;
+      // 3. Wealth & Finance
+      document.getElementById('wealthBio').textContent = b.wealthBio;
+      document.getElementById('wealthStrategy').textContent = b.wealthStrategy;
+      document.getElementById('wealthRisk').textContent = b.wealthRisk;
 
-      // 4. Compatibility
-      document.getElementById('compatFriends').textContent = `Numbers: ${m.friends}. Harmony with these vibrations brings smooth business, marriage & partnerships.`;
-      document.getElementById('compatEnemies').textContent = `Numbers: ${m.enemies}. Prone to ego clashes, misunderstandings or unexpected delays.`;
+      // 4. Career
+      document.getElementById('careerPathBio').textContent = b.careerPathBio;
+      document.getElementById('topBizSectors').textContent = b.topBizSectors;
+      document.getElementById('topCorpRoles').textContent = b.topCorpRoles;
+      document.getElementById('workStyle').textContent = b.workStyle;
 
-      // 5. Career & Advice
-      document.getElementById('careerBio').textContent = b.career;
-      document.getElementById('warningBio').textContent = m.warning;
+      // 5. Love & Compatibility
+      document.getElementById('loveBio').textContent = m.loveBio;
+      document.getElementById('loveBestMatches').textContent = m.loveBestMatches;
+      document.getElementById('loveClashMatches').textContent = m.loveClashMatches;
 
-      // Reveal Results
+      // 6. Health Protocol
+      document.getElementById('healthBio').textContent = m.healthBio;
+      document.getElementById('healthVulnerable').textContent = m.healthVulnerable;
+      document.getElementById('healthRemedy').textContent = m.healthRemedy;
+
+      // 7. Auspicious Matrix
+      document.getElementById('mColors').textContent = m.colors;
+      document.getElementById('mDays').textContent = m.days;
+      document.getElementById('mDates').textContent = m.dates;
+      document.getElementById('mGems').textContent = m.gems;
+      document.getElementById('mDirection').textContent = m.direction;
+      document.getElementById('mMantra').textContent = m.mantra;
+
+      // 8. Critical Warnings
+      document.getElementById('criticalWarnings').textContent = m.warnings;
+
+      // Display & Scroll
       const resBox = document.getElementById('resultBox');
       resBox.classList.remove('hidden');
       resBox.scrollIntoView({ behavior: 'smooth' });
 
-      // WhatsApp Share
+      // WhatsApp Share Setup
       document.getElementById('shareWaBtn').onclick = () => {
-        const text = `🔮 My Numerology Report:\n• Mulank: ${mulank} (${m.lord})\n• Bhagyank: ${bhagyank} (${b.lord})\n• Lucky Colors: ${m.colors}\n• Best Career: ${b.career}\nCheck yours free here: ${window.location.href}`;
+        const text = `🔮 *My Comprehensive Life Numerology Report:*\n• *Mulank (Root):* ${mulank} (${m.lord})\n• *Bhagyank (Destiny):* ${bhagyank} (${b.lord})\n• *Superpower:* ${m.superpower}\n• *Lucky Colors:* ${m.colors}\n• *Lucky Gems:* ${m.gems}\n• *Best Career:* ${b.topBizSectors}\n\nCheck your detailed report free in 100+ languages here:\n${window.location.href}`;
         window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
       };
     });
