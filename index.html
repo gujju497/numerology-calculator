@@ -10,33 +10,31 @@
   <script src="https://cdn.tailwindcss.com"></script>
   
   <style>
-    /* Google banner aur logo ko cleanly hide karna */
-    .goog-te-banner-frame.skiptranslate { display: none !important; }
-    body { top: 0px !important; }
-    .goog-logo-link { display: none !important; }
-    .goog-te-gadget { color: transparent !important; font-size: 0px !important; }
-    .goog-te-gadget span { display: none !important; }
-    
-    /* Native Google Select dropdown ko clean styling dena */
-    .goog-te-combo {
-      background-color: #f8fafc !important;
-      border: 1px solid #cbd5e1 !important;
-      padding: 6px 12px !important;
-      border-radius: 12px !important;
-      font-size: 13px !important;
-      font-weight: 600 !important;
-      color: #334155 !important;
-      outline: none !important;
-      cursor: pointer !important;
+    /* Google ke banners aur logos ko screen par aane se rokein */
+    .goog-te-banner-frame.skiptranslate, #goog-gt-tt, .goog-te-balloon-frame {
+      display: none !important;
+    }
+    body {
+      top: 0px !important;
+      position: static !important;
+    }
+    #google_translate_element {
+      display: none !important;
+      visibility: hidden !important;
+      height: 0 !important;
+      width: 0 !important;
+      overflow: hidden !important;
+    }
+    .skiptranslate > iframe {
+      display: none !important;
     }
   </style>
 
-  <!-- Google Translate Base Script -->
+  <!-- Google Translate Background Engine -->
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
         autoDisplay: false
       }, 'google_translate_element');
     }
@@ -45,13 +43,32 @@
 </head>
 <body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col items-center p-3 sm:p-6 antialiased">
 
-  <!-- Top Language Bar -->
-  <div class="max-w-3xl w-full flex flex-wrap items-center justify-between gap-3 mb-4 bg-white px-4 py-3 rounded-2xl border border-slate-200 shadow-sm">
+  <!-- Hidden Engine Container -->
+  <div id="google_translate_element"></div>
+
+  <!-- Real Working Language Bar -->
+  <div class="max-w-3xl w-full flex flex-wrap items-center justify-between gap-3 mb-4 bg-white px-4 py-3 rounded-2xl border border-slate-200 shadow-sm notranslate">
     <div class="flex items-center gap-2">
-      <span class="text-xs font-bold text-slate-600 uppercase tracking-wider">
+      <span class="text-xs font-bold text-slate-600 uppercase tracking-wider flex items-center gap-1.5">
         🌐 Choose Language:
       </span>
-      <div id="google_translate_element"></div>
+      <select id="userLangChoice" class="bg-slate-50 border border-slate-300 rounded-xl px-3 py-1.5 text-xs sm:text-sm font-bold text-slate-700 outline-none focus:ring-2 focus:ring-amber-500 cursor-pointer">
+        <option value="en">English (Default)</option>
+        <option value="hi">हिन्दी (Hindi)</option>
+        <option value="gu">ગુજરાતી (Gujarati)</option>
+        <option value="mr">मराठी (Marathi)</option>
+        <option value="bn">বাংলা (Bengali)</option>
+        <option value="ta">தமிழ் (Tamil)</option>
+        <option value="te">తెలుగు (Telugu)</option>
+        <option value="es">Español (Spanish)</option>
+        <option value="fr">Français (French)</option>
+        <option value="de">Deutsch (German)</option>
+        <option value="ar">العربية (Arabic)</option>
+        <option value="ru">Русский (Russian)</option>
+        <option value="pt">Português (Portuguese)</option>
+        <option value="ja">日本語 (Japanese)</option>
+        <option value="zh-CN">中文 (Chinese)</option>
+      </select>
     </div>
     <span class="text-[11px] font-semibold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
       ⚡ 100+ World Languages Supported
@@ -283,6 +300,51 @@
   </footer>
 
   <script>
+    // Bullet-Proof Cookie-Based Translation Switcher
+    function setCookie(name, value, days) {
+      let expires = "";
+      if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+      let nameEQ = name + "=";
+      let ca = document.cookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    // Initialize Dropdown to current active language
+    const currentCookie = getCookie('googtrans');
+    const selectElem = document.getElementById('userLangChoice');
+    if (currentCookie) {
+      const activeLang = currentCookie.split('/')[2];
+      if (activeLang && selectElem.querySelector(`option[value="${activeLang}"]`)) {
+        selectElem.value = activeLang;
+      }
+    }
+
+    // Change event for custom selector
+    selectElem.addEventListener('change', function() {
+      const selectedLang = this.value;
+      if (selectedLang === 'en') {
+        // Reset translation
+        setCookie('googtrans', '', -1);
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      } else {
+        setCookie('googtrans', `/en/${selectedLang}`, 30);
+      }
+      window.location.reload();
+    });
+
     // Populate Days (01 to 31)
     const daySelect = document.getElementById('dobDay');
     for (let i = 1; i <= 31; i++) {
@@ -301,6 +363,27 @@
       opt.textContent = y;
       yearSelect.appendChild(opt);
     }
+
+    // Restore selected values from LocalStorage if reloaded after language change
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedName = localStorage.getItem('nm_name');
+      const savedDay = localStorage.getItem('nm_day');
+      const savedMonth = localStorage.getItem('nm_month');
+      const savedYear = localStorage.getItem('nm_year');
+      const shouldAutoCalc = localStorage.getItem('nm_autocalc');
+
+      if (savedName) document.getElementById('userName').value = savedName;
+      if (savedDay) document.getElementById('dobDay').value = savedDay;
+      if (savedMonth) document.getElementById('dobMonth').value = savedMonth;
+      if (savedYear) document.getElementById('dobYear').value = savedYear;
+
+      if (shouldAutoCalc === 'true' && savedDay && savedMonth && savedYear) {
+        localStorage.removeItem('nm_autocalc');
+        setTimeout(() => {
+          document.getElementById('calcBtn').click();
+        }, 300);
+      }
+    });
 
     // Chaldean Numerology Key Values
     const chaldean = {
@@ -579,16 +662,6 @@
       return num;
     }
 
-    // Function to re-trigger Google Translate on newly inserted text
-    function reTriggerTranslate() {
-      const combo = document.querySelector('.goog-te-combo');
-      if (combo && combo.value && combo.value !== 'en') {
-        const currentLang = combo.value;
-        combo.value = currentLang;
-        combo.dispatchEvent(new Event('change'));
-      }
-    }
-
     document.getElementById('calcBtn').addEventListener('click', () => {
       const day = parseInt(document.getElementById('dobDay').value, 10);
       const month = parseInt(document.getElementById('dobMonth').value, 10);
@@ -599,6 +672,12 @@
         alert("Please select Day, Month, and Year.");
         return;
       }
+
+      // Save user input in LocalStorage so state persists on language reload
+      localStorage.setItem('nm_name', name);
+      localStorage.setItem('nm_day', day);
+      localStorage.setItem('nm_month', month);
+      localStorage.setItem('nm_year', year);
 
       const mulank = reduceToSingle(day);
       const bhagyank = reduceToSingle(day + month + year);
@@ -682,9 +761,6 @@
       const resBox = document.getElementById('resultBox');
       resBox.classList.remove('hidden');
       resBox.scrollIntoView({ behavior: 'smooth' });
-
-      // Trigger automatic re-translation for newly inserted report
-      setTimeout(reTriggerTranslate, 100);
 
       // WhatsApp Share Setup
       document.getElementById('shareWaBtn').onclick = () => {
